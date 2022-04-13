@@ -17,11 +17,23 @@ class MainActivity : AppCompatActivity() {
         var haslo1 = findViewById<EditText>(R.id.haslo1) as EditText
         var haslo2 = findViewById<EditText>(R.id.haslo2) as EditText
 
-
+        var haslo = ""
         btn_zat.setOnClickListener {
-            val haslo = haslo1.text;
+            haslo = haslo1.text.toString();
             val text = Toast.makeText(applicationContext , "Haslo zostalo zaspisane", Toast.LENGTH_SHORT)
             text.show()
+        }
+
+        btn_spr.setOnClickListener {
+            val sprhaslo = haslo2.text;
+            if (sprhaslo.toString() == haslo){
+              val text1 = Toast.makeText(applicationContext, "Hasla sa zgodne", Toast.LENGTH_SHORT)
+              text1.show()
+            }
+            else {
+                val text2 = Toast.makeText(applicationContext, "Hasla nie sa zgodne", Toast.LENGTH_SHORT)
+                text2.show()
+            }
         }
     }
 }
