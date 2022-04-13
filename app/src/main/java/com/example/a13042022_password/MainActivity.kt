@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         var btn_spr = findViewById<Button>(R.id.btnSpr) as Button
         var haslo1 = findViewById<EditText>(R.id.haslo1) as EditText
         var haslo2 = findViewById<EditText>(R.id.haslo2) as EditText
+        var btnwidok1 = findViewById<Button>(R.id.btnWidok1) as Button
+        var btnwidok2 = findViewById<Button>(R.id.btnWidok2) as Button
 
         var haslo = ""
         btn_zat.setOnClickListener {
@@ -34,6 +36,9 @@ class MainActivity : AppCompatActivity() {
                 val text2 = Toast.makeText(applicationContext, "Hasla nie sa zgodne", Toast.LENGTH_SHORT)
                 text2.show()
             }
+        }
+        btnwidok1.setOnClickListener {
+
         }
     }
 }
